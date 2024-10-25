@@ -344,13 +344,13 @@ export const PatientHome = (props: any) => {
 
         <section className="lg:flex" data-testid="patient-dashboard">
           <div className="lg:w-2/3">
-            <div className="flex h-full flex-col justify-between rounded-lg bg-white pb-5 pl-9 pt-11 shadow">
+            <div className="flex h-full flex-col justify-between rounded-lg bg-white px-5 pb-5 pt-11 shadow md:pl-9">
               <div>
-                <div className="flex flex-row gap-4">
+                <div className="flex flex-row gap-3">
                   <h1 className="flex flex-row pb-3 text-2xl font-bold capitalize">
                     {patientData.name} - {formatPatientAge(patientData, true)}
                   </h1>
-                  <div className="ml-auto mr-9 flex flex-wrap gap-3">
+                  <div className="ml-auto flex flex-wrap gap-3">
                     {patientData.is_vaccinated && (
                       <Chip
                         variant="custom"
@@ -564,10 +564,10 @@ export const PatientHome = (props: any) => {
               </div>
             </div>
           </div>
-          <div className="h-full px-2 lg:w-1/3">
+          <div className="mt-4 h-full lg:mt-0 lg:w-1/3">
             <div
               id="actions"
-              className="flex h-full flex-col justify-between space-y-2 px-2"
+              className="flex h-full flex-col justify-between space-y-2 lg:px-4"
             >
               <div>
                 {patientData.review_time &&
